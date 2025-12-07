@@ -16,12 +16,22 @@
 ### ✨ Problem Definition
 - 광고 노출을 할지(treat=1) 하지 않을지(treat=0)를 결정하는 **two-action RL 문제**
 - 사용자별 feature를 기반으로 광고 효과(visit, conversion)를 최대화
-- reward 구성 요소:
-  - 광고를 노출하면 CPM 비용 차감  
-  - 클릭/방문 발생 시 CPC 비용 반영  
-  - 전환 발생 시 추가 reward  
-- 결과적으로 **장기적 기대 이익을 최대화하는 정책을 학습**
+- Conversion 발생 시:
+ → 가장 높은 가치(conversion_reward = 15)를 부여
+ → 실제 광고 시스템에서 전환이 가장 큰 비즈니스 가치를 가진다는 가정을 반영
 
+- Visit 발생 시:
+ → 전환은 없었지만 방문한 경우 visit_reward = 1 부여
+ → 전환 가능성 증가 신호를 반영한 보상
+
+- Treatment(광고 노출) 비용:
+ → treat_cost = 0.015만큼 차감
+ → CPM 기반 광고 비용을 단순화한 형태
+
+- Baseline-centered reward:
+ → 전체 reward의 평균값을 baseline으로 빼서 변동 중심화
+ → 정책 학습 시 variance 감소에 도움
+ → PG/A2C 학습 안정성 향상
 ---
 
 ## 🤖 Algorithms Implemented
