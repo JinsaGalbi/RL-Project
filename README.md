@@ -60,10 +60,10 @@
 - `1`: 광고 노출 (Treat)
 
 ### ✔ Reward
-- **treat=1** 일 때 CPM 비용 차감  
-- **visit=1** 발생 시 CPC 비용 차감  
-- **conversion=1** 발생 시 큰 reward 부여  
-- 기존 reward 대비 개선된 버전 → 학습 안정성 및 성능 향상
+- **treat=1** 일 때 -0.015
+- **visit=1** 발생 시 +1  
+- **conversion=1** 발생 시 +15 
+- 기존 reward 대비 개선된 버전 :reward에 평균 reward 차감 → 학습 안정성 및 성능 향상
 
 ---
 
