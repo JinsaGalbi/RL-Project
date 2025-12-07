@@ -70,7 +70,7 @@
 ## 📈 Training Results
 
 ### 1️⃣ **Policy Gradient (PG)**  
-![PG Curve](./plots/pg_curve.png)
+![PG Curve](./plots/PG.png)
 
 - reward variance가 있지만 꾸준히 증가
 - validation 기준 약 **0.075~0.085** 수준 도달
@@ -78,7 +78,7 @@
 ---
 
 ### 2️⃣ **DQN**
-![DQN Curve](./plots/dqn_curve.png)
+![DQN Curve](./plots/DQN.png)
 
 - exploration 영향으로 초기 진동이 크지만  
 - 전반적으로 **0.04~0.06** validation reward 확보  
@@ -87,7 +87,7 @@
 ---
 
 ### 3️⃣ **A2C**
-![A2C Curve](./plots/a2c_curve.png)
+![A2C Curve](./plots/A2C_curve.png)
 
 - 안정적으로 reward 상승  
 - 최종적으로 **PG와 유사하거나 더 높은 validation reward** 도달
@@ -104,7 +104,7 @@
 
 ### 🔹 개선된 reward 설계 이후 결과
 
-![Final Comparison 1](./plots/final_comparison_reward_new1.png)
+![Final Comparison 1](./plots/Final_Comparison.png)
 
 - **A2C(best) ≈ PG(best) > DQN(best)**  
 - 기존 baseline 대비 **2~10배 높은 reward**
@@ -112,7 +112,6 @@
 ---
 
 ### 🔹 기존 reward 대비 성능 차이
-![Final Comparison 2](./plots/final_comparison_reward_new2.png)
 
 - reward 개선 후 모든 RL 알고리즘의 성능이 크게 상승  
 - 특히 PG/A2C는 안정성과 성능 모두 개선됨
@@ -132,11 +131,3 @@
   → 모든 알고리즘의 reward가 크게 개선됨
 
 ---
-
-## ▶️ How to Run
-
-```bash
-pip install -r requirements.txt
-python train_pg.py
-python train_dqn.py
-python train_a2c.py
