@@ -87,7 +87,7 @@
 ---
 
 ### 3️⃣ **A2C**
-![A2C Curve](./plots/A2C_curve.png)
+![A2C Curve](./plots/A2C.png)
 
 - 안정적으로 reward 상승  
 - 최종적으로 **PG와 유사하거나 더 높은 validation reward** 도달
